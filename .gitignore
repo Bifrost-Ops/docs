@@ -1,0 +1,22 @@
+# Never add sensitive state, credentials or local recovery assets.
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.kubeconfig
+kubeconfig
+*.key
+*.pem
+*.p12
+*.pfx
+.env
+.env.*
+!.env.example
+*.agekey
+*.backup
+*.bak
+*.snap
+*.db
+*.sqlite
+secrets/
+backups/
