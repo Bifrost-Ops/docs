@@ -16,7 +16,7 @@ Purpose: inexpensive reproducible lab, no HA guarantee.
 Purpose: resilient shared platform across independent compute failure domains.
 - Management: 3 K3s server VMs (each 4 vCPU, 8 GiB RAM, 100 GiB SSD) plus 2 monitoring workers (each 8 vCPU, 24 GiB RAM, 250 GiB SSD + separately sized persistent monitoring storage).
 - Service: 3 K3s server VMs (each 4 vCPU, 8 GiB RAM, 100 GiB SSD) plus 3 workers (each 8 vCPU, 16 GiB RAM, 150 GiB SSD + application persistent storage).
-- Total requested virtual allocation (excluding hypervisor, storage replicas and growth): **68 vCPU / 172 GiB RAM**. These are summed VM allocations, not physical CPU capacity requirements.
+- Total requested virtual allocation (excluding hypervisor, storage replicas and growth): **64 vCPU / 144 GiB RAM**. These are summed VM allocations, not physical CPU capacity requirements.
 - Minimum 3 independent compute hosts / fault domains for each embedded-etcd quorum; may share physical platform if host placement and anti-affinity are enforced.
 - Physical interfaces **recommended**: 2x 10/25GbE data uplinks to distinct ACI leaves (verify vPC/port-channel design), 1x dedicated BMC management port, separate OOB switch/network, and storage/backup bandwidth sized from measured throughput. Two NICs alone do not guarantee path redundancy.
 - Primary/secondary: dual power feeds/PDUs and independent leaf/uplink paths where available. API VIP/LB must not be a single point of failure.
